@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bvuw43rhc73bv"]
+
+[ext_resource type="PackedScene" uid="uid://c6qn7pyfgj16s" path="res://scenes/player.tscn" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=1254291710]
+
+[node name="Player" parent="." unique_id=1909114123 instance=ExtResource("1_uwrxv")]
+position = Vector2(12, -16)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=133717175]
+position = Vector2(13, -25)
+zoom = Vector2(4, 4)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1472711251]
+format = 2
