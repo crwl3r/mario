@@ -1,8 +1,30 @@
 [gd_scene format=3 uid="uid://5dqje6sqkg08"]
 
-[ext_resource type="Texture2D" uid="uid://wawre7pc0fa4" path="res://assets/sprites/mario_and_items.png" id="1_l6tho"]
+[ext_resource type="Texture2D" uid="uid://qpwx78cqlgqq" path="res://assets/sprites/Mario.png" id="1_l6tho"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8c2qd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6tho"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(0, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s551d"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(30, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjax8"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(60, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc1kf"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(90, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mr0g"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(120, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7tvf"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(150, 0, 30, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ctbi"]
 animations = [{
@@ -13,18 +35,44 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_l6tho")
+"texture": SubResource("AtlasTexture_l6tho")
 }],
 "loop": 1,
-"name": &"idle ",
+"name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s551d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjax8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc1kf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mr0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7tvf")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 10.0
 }]
 
-[node name="Player 2" type="CharacterBody2D" unique_id=1829362165]
+[sub_resource type="CircleShape2D" id="CircleShape2D_o2taf"]
+radius = 5.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1442630190]
-shape = SubResource("CircleShape2D_8c2qd")
+[node name="Mario" type="CharacterBody2D" unique_id=1829362165]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1024635628]
+position = Vector2(46, 4)
 sprite_frames = SubResource("SpriteFrames_8ctbi")
-animation = &"idle "
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2094856186]
+position = Vector2(47, 15)
+shape = SubResource("CircleShape2D_o2taf")
