@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ole7t1g51l2l"
-path="res://.godot/imported/index.apple-touch-icon.png-88c38f906c00bcd359f51e3057e8e7ad.ctex"
+uid="uid://cg7kxyjf1vno2"
+path="res://.godot/imported/Gemini_Generated_Image_46pw9p46pw9p46pw-ezgif.com-jpg-to-png-converter.png-20be2bbb3b31e7c10778922b6756cc93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://deploy/index.apple-touch-icon.png"
-dest_files=["res://.godot/imported/index.apple-touch-icon.png-88c38f906c00bcd359f51e3057e8e7ad.ctex"]
+source_file="res://assets/sprites/Gemini_Generated_Image_46pw9p46pw9p46pw-ezgif.com-jpg-to-png-converter.png"
+dest_files=["res://.godot/imported/Gemini_Generated_Image_46pw9p46pw9p46pw-ezgif.com-jpg-to-png-converter.png-20be2bbb3b31e7c10778922b6756cc93.ctex"]
 
 [params]
 
