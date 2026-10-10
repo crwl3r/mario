@@ -3,24 +3,24 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
-# Flag to disable normal movement when hit by an enemy
+# Flag to lock normal movement when hit
 var is_hurt: bool = false
 
 func _physics_process(delta: float) -> void:
-	# Add gravity continuously
+	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# If hurt, don't allow user input—just let physics/knockback take over
+	# If the player is hurt, skip normal input and let physics handle the fall-off
 	if is_hurt:
 		move_and_slide()
 		return
 
-	# Handle jump
+	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get input direction and handle movement
+	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -29,12 +29,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# Function called when hit from the side
+# This function is called by the enemy when touched from the side
 func play_fall_off(knockback_direction: float) -> void:
 	is_hurt = true
-	# Pop player slightly up and push them away from enemy
-	velocity.y = -150.0 
-	velocity.x = knockback_direction * 100.0
+	# Pop the player up and push them away from the enemy
+	velocity.y = -200.0
+	velocity.x = knockback_direction * 120.0
 	
-	# Disable collisions with floor/enemies so player falls straight through platforms
+	# Disable the player's main collider so they fall straight through platforms
 	$CollisionShape2D.set_deferred("disabled", true)

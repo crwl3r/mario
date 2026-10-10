@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b4ki5l1wi7o3l"]
+
+[ext_resource type="Texture2D" uid="uid://csrhv53n5liaf" path="res://assets/sprites/marioEnemy (1).png" id="1_55jtl"]
+[ext_resource type="Script" uid="uid://cp0frkyaqjvhe" path="res://scripts/enemy.gd" id="1_mpr68"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55jtl"]
+atlas = ExtResource("1_55jtl")
+region = Rect2(36, 150, 18, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7bn3"]
+atlas = ExtResource("1_55jtl")
+region = Rect2(0, 144, 18, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hac7"]
+atlas = ExtResource("1_55jtl")
+region = Rect2(18, 144, 18, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ctbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55jtl")
+}],
+"loop": 1,
+"name": &"ded",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7bn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hac7")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8c2qd"]
+radius = 7.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8c2qd"]
+size = Vector2(8, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctbi"]
+size = Vector2(20, 4)
+
+[node name="enemy" type="CharacterBody2D" unique_id=1289706083]
+script = ExtResource("1_mpr68")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1734196451]
+position = Vector2(0, 3)
+sprite_frames = SubResource("SpriteFrames_8ctbi")
+animation = &"ded"
+autoplay = "walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=716381559]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_8c2qd")
+
+[node name="StompArea" type="Area2D" parent="." unique_id=1891800128]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea" unique_id=74257314]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_8c2qd")
+
+[node name="SideHitbox" type="Area2D" parent="." unique_id=724344294]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideHitbox" unique_id=1489401861]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_8ctbi")
+
+[node name="Timer" type="Timer" parent="SideHitbox" unique_id=1260021330]
+wait_time = 1.7759999999999998
+one_shot = true
+
+[connection signal="body_entered" from="StompArea" to="." method="_on_stomp_area_body_entered"]
+[connection signal="body_entered" from="SideHitbox" to="." method="_on_side_hitbox_body_entered"]
+[connection signal="timeout" from="SideHitbox/Timer" to="." method="_on_timer_timeout"]
