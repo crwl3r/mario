@@ -233,9 +233,10 @@ tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAD+////AAAAAAAAAAAAAP//AAAAAAA
 tile_set = SubResource("TileSet_8c2qd")
 
 [node name="Player" parent="." unique_id=1995089216 instance=ExtResource("3_lbhrr")]
-position = Vector2(25, -32)
+position = Vector2(1044, -119)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=697706846]
+visible = false
 zoom = Vector2(4, 4)
 limit_bottom = 120
 limit_smoothed = true
@@ -292,3 +293,6 @@ autoplay = &"move"
 
 [node name="Enemy" parent="." unique_id=1730483750 instance=ExtResource("7_u5sy4")]
 position = Vector2(1179, -53)
+
+[node name="Enemy2" parent="." unique_id=1262167895 instance=ExtResource("7_u5sy4")]
+position = Vector2(1244, -55)
