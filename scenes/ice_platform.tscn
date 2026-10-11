@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8c2qd"]
 size = Vector2(29, 5)
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=802245070]
+[node name="ice_platform" type="AnimatableBody2D" unique_id=802245070]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953269996]
 position = Vector2(-1, 8)
