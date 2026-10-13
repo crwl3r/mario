@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dhuj65878w76p"]
+
+[ext_resource type="Texture2D" uid="uid://duv2sqfmqqp1t" path="res://assets/sprites/enemy two.png" id="1_tadnj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vs83"]
+atlas = ExtResource("1_tadnj")
+region = Rect2(0, 0, 18, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ira1t"]
+atlas = ExtResource("1_tadnj")
+region = Rect2(18, 0, 18, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ctbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vs83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ira1t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8c2qd"]
+radius = 6.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=869672007]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=242197504]
+sprite_frames = SubResource("SpriteFrames_8ctbi")
+autoplay = "default"
+frame_progress = 0.89484346
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=972847190]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_8c2qd")
