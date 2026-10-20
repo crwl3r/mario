@@ -100,11 +100,11 @@ radius = 4.0
 
 [node name="Coin" type="Area2D" unique_id=1798984093]
 collision_mask = 2
+script = ExtResource("2_i64fm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1088993319]
 sprite_frames = SubResource("SpriteFrames_8c2qd")
 autoplay = "default"
-script = ExtResource("2_i64fm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=155035796]
 shape = SubResource("CircleShape2D_8ctbi")
