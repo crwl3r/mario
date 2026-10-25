@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b4ki5l1wi7o3l" path="res://scenes/Enemy.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://byl2hgo1ojf8f" path="res://scenes/ice_platform.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://dxlk4m7ncwmdy" path="res://scenes/sand_platform.tscn" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://dnarg84tx0ny3" path="res://scenes/label.gd" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -426,10 +427,10 @@ position = Vector2(1665, -110)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1732626844]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=2042439691]
-offset_left = 50.0
-offset_top = -123.0
-offset_right = 143.0
-offset_bottom = -78.0
+offset_left = 45.0
+offset_top = 19.0
+offset_right = 138.0
+offset_bottom = 64.0
 theme_override_colors/font_color = Color(0.972549, 0.8666667, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -437,3 +438,4 @@ theme_override_constants/outline_size = -2
 theme_override_constants/shadow_outline_size = 1
 theme_override_font_sizes/font_size = 32
 text = "Coins:"
+script = ExtResource("10_vtaks")
