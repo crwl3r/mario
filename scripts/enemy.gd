@@ -30,19 +30,23 @@ func _on_side_hitbox_body_entered(body: Node2D) -> void:
 	if is_dead: 
 		return  
 		
-	if body.has_method("play_fall_off"):
+	if body.name == "Player" and body.has_method("play_fall_off"):
 		var knockback_dir: float = sign(body.global_position.x - global_position.x)
 		if knockback_dir == 0:
 			knockback_dir = 1.0
 		body.play_fall_off(knockback_dir)
 		
 		print("You Died!")
+		
+		GameManager.score = 0
+		
 		timer.start()
+
 func _on_stomp_area_body_entered(body: Node2D) -> void:
 	if is_dead:
 		return
 
-	if body.has_method("play_fall_off"):
+	if body.name == "Player" and body.has_method("play_fall_off"):
 		if body.velocity.y >= 0 or body.global_position.y < global_position.y:
 			is_dead = true
 			
