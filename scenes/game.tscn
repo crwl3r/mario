@@ -183,6 +183,44 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
 
+[sub_resource type="Animation" id="Animation_vtaks"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3071, -250)]
+}
+
+[sub_resource type="Animation" id="Animation_kvpfn"]
+resource_name = "move"
+length = 2.1
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.06),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3071, -250), Vector2(2862, -250)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dinhu"]
+_data = {
+&"RESET": SubResource("Animation_vtaks"),
+&"move": SubResource("Animation_kvpfn")
+}
+
 [sub_resource type="Animation" id="Animation_lnu2h"]
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -257,44 +295,6 @@ _data = {
 &"move": SubResource("Animation_0tnpc")
 }
 
-[sub_resource type="Animation" id="Animation_vtaks"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3071, -250)]
-}
-
-[sub_resource type="Animation" id="Animation_kvpfn"]
-resource_name = "move"
-length = 2.1
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.06),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(3071, -250), Vector2(2862, -250)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dinhu"]
-_data = {
-&"RESET": SubResource("Animation_vtaks"),
-&"move": SubResource("Animation_kvpfn")
-}
-
 [node name="Game" type="Node2D" unique_id=1254291710]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=2114894364]
@@ -328,6 +328,81 @@ shape = SubResource("WorldBoundaryShape2D_p57ef")
 
 [node name="Coins" type="Node2D" parent="." unique_id=927665849]
 
+[node name="Coin11" parent="Coins" unique_id=1447284533 instance=ExtResource("3_iywne")]
+position = Vector2(1215, -105)
+
+[node name="Coin12" parent="Coins" unique_id=1690224145 instance=ExtResource("3_iywne")]
+position = Vector2(1698, -175)
+
+[node name="Coin13" parent="Coins" unique_id=1487607901 instance=ExtResource("3_iywne")]
+position = Vector2(1741, -174)
+
+[node name="Coin14" parent="Coins" unique_id=1429731536 instance=ExtResource("3_iywne")]
+position = Vector2(1848, -208)
+
+[node name="Coin15" parent="Coins" unique_id=308273229 instance=ExtResource("3_iywne")]
+position = Vector2(2032, -191)
+
+[node name="Coin16" parent="Coins" unique_id=1435875398 instance=ExtResource("3_iywne")]
+position = Vector2(2101, -232)
+
+[node name="Coin17" parent="Coins" unique_id=1204296809 instance=ExtResource("3_iywne")]
+position = Vector2(2191, -265)
+
+[node name="Coin18" parent="Coins" unique_id=302141583 instance=ExtResource("3_iywne")]
+position = Vector2(2287, -320)
+
+[node name="Coin19" parent="Coins" unique_id=170947137 instance=ExtResource("3_iywne")]
+position = Vector2(2401, -268)
+
+[node name="Coin20" parent="Coins" unique_id=278122448 instance=ExtResource("3_iywne")]
+position = Vector2(2770, -218)
+
+[node name="Coin21" parent="Coins" unique_id=445579153 instance=ExtResource("3_iywne")]
+position = Vector2(2953, -316)
+
+[node name="Coin22" parent="Coins" unique_id=1274950374 instance=ExtResource("3_iywne")]
+position = Vector2(2999, -320)
+
+[node name="Coin23" parent="Coins" unique_id=665591490 instance=ExtResource("3_iywne")]
+position = Vector2(3129, -217)
+
+[node name="Coin24" parent="Coins" unique_id=1417288619 instance=ExtResource("3_iywne")]
+position = Vector2(3217, -224)
+
+[node name="Coin25" parent="Coins" unique_id=1817948801 instance=ExtResource("3_iywne")]
+position = Vector2(3613, -376)
+
+[node name="Coin26" parent="Coins" unique_id=182443836 instance=ExtResource("3_iywne")]
+position = Vector2(3639, -377)
+
+[node name="Coin27" parent="Coins" unique_id=1804149482 instance=ExtResource("3_iywne")]
+position = Vector2(3487, -255)
+
+[node name="Coin28" parent="Coins" unique_id=1867824585 instance=ExtResource("3_iywne")]
+position = Vector2(3590, -265)
+
+[node name="Coin29" parent="Coins" unique_id=276347293 instance=ExtResource("3_iywne")]
+position = Vector2(3665, -279)
+
+[node name="Coin30" parent="Coins" unique_id=1471157891 instance=ExtResource("3_iywne")]
+position = Vector2(3355, -258)
+
+[node name="Coin31" parent="Coins" unique_id=784868304 instance=ExtResource("3_iywne")]
+position = Vector2(3768, -304)
+
+[node name="Coin32" parent="Coins" unique_id=1497285445 instance=ExtResource("3_iywne")]
+position = Vector2(3844, -277)
+
+[node name="Coin33" parent="Coins" unique_id=1969542793 instance=ExtResource("3_iywne")]
+position = Vector2(3870, -274)
+
+[node name="Coin34" parent="Coins" unique_id=2092382791 instance=ExtResource("3_iywne")]
+position = Vector2(3890, -274)
+
+[node name="Coin35" parent="Coins" unique_id=239688791 instance=ExtResource("3_iywne")]
+position = Vector2(3917, -275)
+
 [node name="Coin" parent="Coins" unique_id=1798984093 instance=ExtResource("3_iywne")]
 position = Vector2(66, -79)
 
@@ -358,7 +433,26 @@ position = Vector2(791, -115)
 [node name="Coin10" parent="Coins" unique_id=180047132 instance=ExtResource("3_iywne")]
 position = Vector2(969, -112)
 
+[node name="enemy" parent="Coins" unique_id=1289706083 instance=ExtResource("7_u5sy4")]
+position = Vector2(3481, -211)
+
+[node name="enemy2" parent="Coins" unique_id=63618582 instance=ExtResource("7_u5sy4")]
+position = Vector2(3511, -209)
+
+[node name="AnimatableBody2D" parent="Coins" unique_id=498709936 instance=ExtResource("9_0tnpc")]
+position = Vector2(3711, -312)
+
 [node name="platforms" type="Node2D" parent="." unique_id=2103246047]
+
+[node name="ice_platform" parent="platforms" unique_id=1502522195 instance=ExtResource("8_gee14")]
+position = Vector2(2103, -219)
+
+[node name="ice_platform2" parent="platforms" unique_id=1211448376 instance=ExtResource("8_gee14")]
+position = Vector2(3071, -250)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/ice_platform2" unique_id=1999444747]
+libraries/ = SubResource("AnimationLibrary_dinhu")
+autoplay = &"move"
 
 [node name="Platform" parent="platforms" unique_id=972332342 instance=ExtResource("3_lnu2h")]
 position = Vector2(204, -126)
@@ -390,8 +484,14 @@ position = Vector2(2508, -232)
 
 [node name="enemy" type="Node2D" parent="." unique_id=2019574474]
 
-[node name="enemy1" parent="enemy" unique_id=1289706083 instance=ExtResource("7_u5sy4")]
+[node name="enemy6" parent="enemy" unique_id=1966467813 instance=ExtResource("7_u5sy4")]
+position = Vector2(1665, -110)
+
+[node name="enemy1" parent="enemy" unique_id=1090416517 instance=ExtResource("7_u5sy4")]
 position = Vector2(1158, -63)
+
+[node name="enemy5" parent="enemy" unique_id=1779370616 instance=ExtResource("7_u5sy4")]
+position = Vector2(2774, -191)
 
 [node name="enemy2" parent="enemy" unique_id=1348186301 instance=ExtResource("7_u5sy4")]
 position = Vector2(670, -63)
@@ -402,24 +502,8 @@ position = Vector2(94, 3)
 [node name="enemy4" parent="enemy" unique_id=518685078 instance=ExtResource("7_u5sy4")]
 position = Vector2(1289, -62)
 
-[node name="ice_platform" parent="." unique_id=1502522195 instance=ExtResource("8_gee14")]
-position = Vector2(2103, -219)
-
-[node name="ice_platform2" parent="." unique_id=1211448376 instance=ExtResource("8_gee14")]
-position = Vector2(3071, -250)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ice_platform2" unique_id=1999444747]
-libraries/ = SubResource("AnimationLibrary_dinhu")
-autoplay = &"move"
-
-[node name="AnimatableBody2D" parent="." unique_id=498709936 instance=ExtResource("9_0tnpc")]
+[node name="AnimatableBody2D" parent="." unique_id=825566791 instance=ExtResource("9_0tnpc")]
 position = Vector2(3767, -284)
-
-[node name="enemy2" parent="." unique_id=1779370616 instance=ExtResource("7_u5sy4")]
-position = Vector2(2774, -191)
-
-[node name="enemy3" parent="." unique_id=1966467813 instance=ExtResource("7_u5sy4")]
-position = Vector2(1665, -110)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1732626844]
 
@@ -436,3 +520,7 @@ theme_override_constants/shadow_outline_size = 1
 theme_override_font_sizes/font_size = 32
 text = "Coins:"
 script = ExtResource("10_vtaks")
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=195950389]
+offset_right = 40.0
+offset_bottom = 23.0
