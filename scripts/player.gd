@@ -30,3 +30,7 @@ func play_fall_off(knockback_direction: float) -> void:
 	velocity.x = knockback_direction * 120.0
 	
 	$CollisionShape2D.set_deferred("disabled", true)
+
+
+func _on_end_zone_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
